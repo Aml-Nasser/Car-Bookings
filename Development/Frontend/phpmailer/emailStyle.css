@@ -1,0 +1,35 @@
+h2
+{
+
+    margin-left: 7%;
+    margin-top:5%;
+
+}
+#email_add_admin{
+
+    height: 30px;
+    width:230px;
+
+
+}
+
+#btn_add_admin{
+
+    background-color:#01A7F0;
+    border:0px;
+    height: 30px;
+    width:80px;
+    cursor: pointer;
+
+}
+#msg{
+
+
+    font-size:24px;
+    font-family: sans -serif;
+    margin-left: 40%;
+
+
+
+
+}
