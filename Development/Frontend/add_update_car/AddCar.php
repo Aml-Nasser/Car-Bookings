@@ -7,7 +7,7 @@ href="AddCar.css" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   </head>
 <body>
-  <form method="post"><!--action="/action_page.php"-->
+  <form method="post" enctype="multipart/form-data"><!--action="/action_page.php"-->
   	<div id="display_image" name="img" >
 
 
@@ -58,13 +58,14 @@ $conn=$db->connection();
   //if (!isset($_SESSION['username']) && !isset($_SESSION['password']) && !isset($_SESSION['number']) && !isset($_SESSION['relatedfaculty']) ){ 
    // echo "1111111111";
     if (isset($_POST['submit'])){//&&!empty($_POST['submit']))
-      echo "2222222222222";
-      $photo=$_POST['photo'];
+      //echo "2222222222222";
+     // $photo=$_POST['photo'];
+    $photo=addslashes(file_get_contents($_FILES['photo']['tmp_name']));
       $name=$_POST['names'];
       $color=$_POST['color'];
       $price=$_POST['price'];
 
-  $Add= "INSERT INTO carmodified (image,name,color,price) VALUES ('$photo','$name','$color','$price') ";
+  $Add= "INSERT INTO car (price,brand,color,image) VALUES ('$price','$name','$color','$photo') ";
   //echo "3333333333333";
   $query=mysqli_query($conn,$Add);
     
