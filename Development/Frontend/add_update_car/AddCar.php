@@ -64,7 +64,10 @@ $conn=$db->connection();
       $name=$_POST['names'];
       $color=$_POST['color'];
       $price=$_POST['price'];
-
+if($price<1){
+  echo"<script> alert('Enter Car price')</script>";
+}
+else{ 
   $Add= "INSERT INTO car (price,brand,color,image) VALUES ('$price','$name','$color','$photo') ";
   //echo "3333333333333";
   $query=mysqli_query($conn,$Add);
@@ -73,7 +76,7 @@ $conn=$db->connection();
        //printf("car added successfully.\n");
     	echo"<script> alert('car added successfully')</script>";
 }
-     
+  }   
 }
 //}
 ?>
