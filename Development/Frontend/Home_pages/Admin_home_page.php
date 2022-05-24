@@ -9,13 +9,6 @@
 <a href="Add_car.html">
 <button type="button" style="float:right; margin-top:20px; margin-left:20px;" >Add Car</button>
 </a>
-<a href="Add_user">
-<button type="button" style="float:right; margin-top:20px; margin-left:20px;">Add User</button>
-</a>
-<a href="Add_admin">
-<button type="button" style="float:right; margin-top:20px; margin-left:20px;">Add Admin</button>
-</a>
-</a>
 <a href="Add_admin">
 <button type="button" style="float:right; margin-top:20px; margin-left:20px;">Update car</button>
 </a>

@@ -66,7 +66,6 @@ if( empty(session_id()) && !headers_sent()){
 require_once 'connect.php';
 $db = new connect();
 $conn = $db->connection();
-
 $query = "select * from car";
 $query_run = mysqli_query($conn,$query);
 while($row = mysqli_fetch_array($query_run))
